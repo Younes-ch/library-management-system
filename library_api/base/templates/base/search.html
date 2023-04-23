@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+<section>
+    <div class="form-box">
+        <h2>ShelfLife</h2>
+        <br>
+
+        <form id="form" method="get"> 
+            <label for="slct">
+                <select id="slct" required>
+                    <option value="" disabled selected>Select search option</option>
+                    <option value="title">Book title</option>
+                    <option value="author">Author</option>
+                    <option value="genre">Genre</option>
+                    <option value="year">Publishing year</option>
+                </select>
+            </label>
+            <div id="search-wrapper">
+                <div class="search-bar">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input id="search-bar-input" required>
+                    <label>Search</label>
+                </div>
+                <div class="search-button">
+                    <button onclick="scrollToResults()">Search</button>
+                    <br>
+                </div>
+            </div>    
+        </form>
+    </div>
+</section>
+<div id="search-results-wrapper">
+
+</div>
+<script src="{% static 'js/search.js' %}"></script>
+{% endblock %}

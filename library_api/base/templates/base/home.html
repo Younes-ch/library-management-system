@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<div class="search-results-wrapper">
+    <h2>Books</h2>
+    <br>
+    <div id="search-results">
+        {% for book in books %}
+            <div class="card">
+                <div class="book-title">{{ book.title }}</div>
+                <div class="book-info">{{ book.author }}</div>
+                <div class="book-info">{{ book.genre }}</div>
+                <div class="book-info">{{ book.publishing_year }}</div>
+                <div class="book-info">{{ book.pages }} Pages</div>
+                <div class="book-info">{{ book.chapters }} Chapters</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

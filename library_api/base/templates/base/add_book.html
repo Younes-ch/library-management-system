@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div id="form-wrapper">
+        <div class="form-title">
+            <h2>ShelfLife</h2>
+        </div>
+        <div class="form-content">
+            <form id="form" method="post">
+                {% csrf_token %}
+                <div id="title-input-wrapper">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar-input" required>
+                        <label>Title</label>
+                    </div>
+                </div>
+                <div id="author-input-wrapper">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar-input" required>
+                        <label>Author</label>
+                    </div>
+                </div>
+                <div id="genre-input-wrapper">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar-input" required>
+                        <label>Genre</label>
+                    </div>
+                </div>
+                <div id="year-input-wrapper">
+                    <div class="search-bar">
+                        <input type="number" class="search-bar-input" required>
+                        <label>Publishing year</label>
+                    </div>
+                </div>
+                <div id="pages-input-wrapper">
+                    <div class="search-bar">
+                        <input type="number" class="search-bar-input" required>
+                        <label>Pages</label>
+                    </div>
+                </div>
+                <div id="chapters-input-wrapper">
+                    <div class="search-bar">
+                        <input type="number" class="search-bar-input" required>
+                        <label>Chapters</label>
+                    </div>
+                </div>
+                <div id="submit-button-wrapper">
+                    <div class="search-button">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+</section>
+<script src="{% static 'js/add_book.js' %}"></script>
+{% endblock %}
