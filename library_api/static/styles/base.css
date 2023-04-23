@@ -34,10 +34,10 @@ section {
 }
 
 #form-wrapper {
-    padding-top: 100px;
+    margin-top: 200px;
     position: relative;
     width: 40%;
-    height: 120vh;
+    height: 110vh;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
@@ -53,6 +53,14 @@ h2 {
     color: #eccb5f;
     text-align: center;
     text-shadow: 0 0 10px #000000;
+}
+
+#books-heading {
+    font-size: 2em;
+    color: #eccb5f;
+    text-align: center;
+    text-shadow: 0 0 10px #000000;
+    margin-top: 70px;
 }
 
 h3 {
@@ -155,7 +163,7 @@ select option {
 
 #search-results {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: .25rem;
     margin-top: 1rem;
 }
@@ -166,11 +174,8 @@ select option {
     border-radius: 10px;
     background-color: #00000071;
     padding: .5rem;
-    padding-right: 2rem;
     color: azure;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    box-sizing: border-box;
 }
 
 .card > .book-title {   
