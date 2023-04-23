@@ -8,7 +8,7 @@ The API can be accessed through HTTP requests and returns JSON responses. You ca
 
 * To get started, clone this repository to your local machine:
 
-`git clone https://github.com/your-username/library-management-system.git`
+`git clone https://github.com/Younes-ch/library-management-system.git`
 
 `cd library-management-system`
 
