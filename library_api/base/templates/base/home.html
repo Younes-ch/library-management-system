@@ -5,7 +5,8 @@
     <h2 id="books-heading">Books</h2>
     <br>
     <div id="search-results">
-        {% for book in books %}
+    {% for book in books %}
+        <a href={{ book.link }} class="book-link" target="_blank">
             <div class="card">
                 <div class="book-title">{{ book.title }}</div>
                 <div class="book-info">{{ book.author }}</div>
@@ -14,7 +15,10 @@
                 <div class="book-info">{{ book.pages }} Pages</div>
                 <div class="book-info">{{ book.chapters }} Chapters</div>
             </div>
+        </a>
+        {% empty %}
+        </div>
+        <h3>No books were found.</h3>
         {% endfor %}
-    </div>
 </div>
 {% endblock %}

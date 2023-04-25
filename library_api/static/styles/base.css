@@ -34,10 +34,10 @@ section {
 }
 
 #form-wrapper {
-    margin-top: 200px;
+    margin-top: 50px;
     position: relative;
     width: 40%;
-    height: 110vh;
+    height: 80vh;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
@@ -70,7 +70,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 #search-wrapper {
@@ -163,7 +163,7 @@ select option {
 
 #search-results {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: .25rem;
     margin-top: 1rem;
 }
@@ -178,14 +178,23 @@ select option {
     box-sizing: border-box;
 }
 
-.card > .book-title {   
+.card .book-title {   
     margin-bottom: .25rem;
     color: #eccb5f;
 }
 
-.card > .book-info {
+.card .book-info {
     font-size: .8rem;
     color: #ddd2d2;
+}
+
+.book-link {
+    text-decoration: none;
+}
+
+.book-link:hover {
+    background-color: #383737b0;
+    border-radius: 10px;
 }
 
 nav {
@@ -239,12 +248,5 @@ nav a {
 nav a:hover {
     background-color: #eccb5f;
     color: #333;
-    border-radius: 0.5em;
-}
-
-nav ul li a.active {
-    background-color: white;
-    color: #333;
-    font-weight: bold; 
     border-radius: 0.5em;
 }

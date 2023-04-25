@@ -8,6 +8,7 @@ class Book(models.Model):
     publishing_year = models.IntegerField()
     pages = models.IntegerField()
     chapters = models.IntegerField()
+    link = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return self.title

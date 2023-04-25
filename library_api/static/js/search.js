@@ -1,3 +1,5 @@
+const csrf_token = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+
 const selectElement = document.getElementById("slct");
 const formElement = document.getElementById("form");
 const searchWrapper = document.getElementById("search-wrapper");
@@ -22,12 +24,17 @@ selectElement.addEventListener("change", (event) => {
                 <option value="" disabled selected>Choose a year</option>
             </select>`;
             var selectYear = document.getElementById("select-year");
-            for (let i = 2023; i >= 1990; i--) {
-                var option = document.createElement("option");
-                option.value = i;
-                option.text = i;
-                selectYear.appendChild(option);
-            }
+            url = "http://127.0.0.1:8000/api/getAllYears/"
+            fetch(url)
+                .then((response) => response.json())
+                .then((data) => {
+                    data.forEach((year) => {
+                        var option = document.createElement("option");
+                        option.value = year;
+                        option.text = year;
+                        selectYear.appendChild(option);
+                    });
+                });
             break;
         }
     if (searchBarInput)
@@ -62,7 +69,12 @@ formElement.addEventListener("submit", (event) => {
                 searchResultsWrapper.appendChild(searchResults);
                 console.log(data);
                 data.forEach((book) => {
+                const link = document.createElement("a");
+                link.className = "book-link";
+                link.href = book.link;
+                link.target = "_blank";
                 const bookDiv = document.createElement("div");
+                link.appendChild(bookDiv);
                 bookDiv.className = "card";
                 const bookTitleDiv = document.createElement("div");
                 bookTitleDiv.className = "book-title";
@@ -88,7 +100,7 @@ formElement.addEventListener("submit", (event) => {
                 bookChaptersDiv.className = "book-info";
                 bookChaptersDiv.innerHTML = book.chapters + " Chapters";
                 bookDiv.appendChild(bookChaptersDiv);
-                searchResults.appendChild(bookDiv);
+                searchResults.appendChild(link);
             })}
         })
         searchResultsWrapper.innerHTML = "";

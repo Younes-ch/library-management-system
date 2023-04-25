@@ -8,6 +8,7 @@
         <br>
 
         <form id="form" method="get"> 
+            {% csrf_token %}
             <label for="slct">
                 <select id="slct" required>
                     <option value="" disabled selected>Select search option</option>

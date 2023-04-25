@@ -1,0 +1,50 @@
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "publishing_year": 1960,
+    "pages": 281,
+    "chapters": 31
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian Fiction",
+    "publishing_year": 1949,
+    "pages": 328,
+    "chapters": 3
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "publishing_year": 1951,
+    "pages": 224,
+    "chapters": 26
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Fiction",
+    "year": 1925,
+    "pages": 180,
+    "chapters": 9
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "publishing_year": 1813,
+    "pages": 432,
+    "chapters": 61
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "publishing_year": 1954,
+    "pages": 1178,
+    "chapters": 62
+  }
+]

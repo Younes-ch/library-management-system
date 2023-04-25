@@ -12,8 +12,8 @@ const chapters = document.querySelector("#chapters-input-wrapper > .search-bar >
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (year.value && (isNaN(year.value) || year.value < 1990 || year.value > 2023)) {
-        alert("Please enter a valid year. (1990-2023)");
+    if (year.value && (isNaN(year.value) || year.value < 1800 || year.value > 2023)) {
+        alert("Please enter a valid year. (1800-2023)");
         return;
     }
     const url = "http://127.0.0.1:8000/api/books/add/";
