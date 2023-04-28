@@ -30,3 +30,8 @@ This will start the server on `http://localhost:8000/`. You can access the API d
 
 
 In addition to the API, the project includes a landing page that shows all the books in the database. The landing page also features a navbar with a search function that allows you to search for books by title, author, genre or year. There is also an "Add" section that shows a form to add a new book to the database.
+
+# Note
+
+There are 2 files:
+- `to_add_1.json` and `to_add_5.json`: These are 2 JSON files you can use to add books through the API with cURL or Postman, etc.. to experiment with the API.
