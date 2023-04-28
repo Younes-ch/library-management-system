@@ -1,6 +1,6 @@
 # Library Management System API
 
-This is a RESTful API for managing a library of books. It allows you to add, update, delete and read books from a fake dataset of books. Each book is modeled with a title, author, genre, publishing year, pages, and chapters.
+This is a RESTful API for managing a library of books. It allows you to add, update, delete and read books from a database of books. Each book is modeled with a title, author, genre, publishing year, pages, and chapters.
 
 The API can be accessed through HTTP requests and returns JSON responses. You can use tools like Postman or cURL to interact with the API.
 
