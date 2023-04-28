@@ -52,7 +52,10 @@ def getAllYears(request):
 def getBooks(request):
     books = Book.objects.all()
     serializer = BookSerializer(books, many=True)
-    return Response(serializer.data)
+    if books:
+        return Response(serializer.data)
+    else:
+        return Response({'message': 'No books found.'})
 
 @api_view(['GET'])
 def getBook(request, pk):
@@ -89,9 +92,10 @@ def updateBook(request, pk):
     book = Book.objects.get(id=pk)
     serializer = BookSerializer(instance=book, data=data)
     if serializer.is_valid():  
-        json_data = get_book_url(serializer.validated_data['title'])
-        if json_data:
-            serializer.save(link=json_data[0]['url'])
+        if book.title != serializer.validated_data['title']:
+            json_data = get_book_url(serializer.validated_data['title'])
+            if json_data:
+                serializer.save(link=json_data[0]['url'])
         serializer.save()
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
