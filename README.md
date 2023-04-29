@@ -1,8 +1,12 @@
 # Library Management System API
 
-This is a RESTful API for managing a library of books. It allows you to add, update, delete and read books from a database of books. Each book is modeled with a title, author, genre, publishing year, pages, and chapters.
+This is a RESTful API for managing a library of books, built with Django and Django Rest Framework. Django is a high-level Python web framework that provides a clean and pragmatic design for building web applications. It takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. Django Rest Framework is a powerful and flexible toolkit for building Web APIs, and it works seamlessly with Django.
+
+It allows you to add, update, delete and read books from a database of books. Each book is modeled with a title, author, genre, publishing year, pages, chapters and link to read it.
 
 The API can be accessed through HTTP requests and returns JSON responses. You can use tools like Postman or cURL to interact with the API.
+
+# Installation
 
 # Installation
 
