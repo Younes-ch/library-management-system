@@ -5,20 +5,38 @@
     <h2 id="books-heading">Books</h2>
     <br>
     <div id="search-results">
-    {% for book in books %}
-        <a href={{ book.link }} class="book-link" target="_blank">
-            <div class="card">
-                <div class="book-title">{{ book.title }}</div>
-                <div class="book-info">{{ book.author }}</div>
-                <div class="book-info">{{ book.genre }}</div>
-                <div class="book-info">{{ book.publishing_year }}</div>
-                <div class="book-info">{{ book.pages }} Pages</div>
-                <div class="book-info">{{ book.chapters }} Chapters</div>
+        {% for book in books %}
+        <div class="card">
+            {% if book.link %}
+                <a href="{{ book.link }}" class="book-link" target="_blank">
+            {% else %}
+                <a href="#" class="book-link">
+            {% endif %}
+                    <div class="card-content">
+                        <div class="card-text">
+                            <div class="book-title">{{ book.title }}</div>
+                            <div class="book-info">{{ book.author }}</div>
+                            <div class="book-info">{{ book.genre }}</div>
+                            <div class="book-info">{{ book.publishing_year }}</div>
+                            <div class="book-info">{{ book.pages }} Pages</div>
+                            <div class="book-info">{{ book.chapters }} Chapters</div>
+                        </div>
+                        {% if book.cover %}
+                            <div class="card-image">
+                                <img class="book-cover" src="{{ book.cover }}">
+                            </div>
+                        {% endif %}
+                    </div>
+                </a>    
+            <div class="card-buttons">
+                <button class="edit-button">Edit</button>
+                <button class="delete-button">Delete</button>
             </div>
-        </a>
-    {% empty %}
+        </div>
+        {% empty %}
         </div>
         <h3>No books were found.</h3>
     {% endfor %}
 </div>
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}

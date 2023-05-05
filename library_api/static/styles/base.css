@@ -11,6 +11,61 @@ body {
     background-size: cover;
 }
 
+
+nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding: 0 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000071;
+    z-index: 1;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    color: #eccb5f;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-logo ion-icon {
+    margin-right: 10px;
+}
+  
+  
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    padding: 0.5em;
+    color: #eccb5f;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #eccb5f;
+    color: #333;
+    border-radius: 0.5em;
+}
+
 section {
     display: flex;
     justify-content: center;
@@ -33,7 +88,7 @@ section {
     align-items: center;
 }
 
-#form-wrapper {
+.form-wrapper {
     margin-top: 50px;
     position: relative;
     width: 40%;
@@ -163,7 +218,7 @@ select option {
 
 #search-results {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: .25rem;
     margin-top: 1rem;
 }
@@ -175,16 +230,38 @@ select option {
     background-color: #00000071;
     padding: .5rem;
     color: azure;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.book-cover {
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+  
+.card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.card .book-title {   
+.card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card-text .book-title {
     margin-bottom: .25rem;
     color: #eccb5f;
 }
 
-.card .book-info {
-    font-size: .8rem;
+.card-text .book-info {
+    font-size: 1rem;
     color: #ddd2d2;
 }
 
@@ -192,61 +269,28 @@ select option {
     text-decoration: none;
 }
 
-.book-link:hover {
-    background-color: #383737b0;
-    border-radius: 10px;
-}
-
-nav {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 3rem;
-    padding: 0 2em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #00000071;
-    z-index: 1;
-}
-
-.nav-logo {
+.card-buttons {
     display: flex;
-    align-items: center;
-    color: #eccb5f;
-    font-weight: bold;
-    font-size: 24px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.nav-logo ion-icon {
-    margin-right: 10px;
-}
-  
-  
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.edit-button,
+.delete-button {
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: .5rem;
+    cursor: pointer;
 }
 
-nav li {
-    margin: 0 10px;
+.edit-button {
+    background-color: #5cb85c;
+    color: white;
 }
 
-nav a {
-    display: block;
-    padding: 0.5em;
-    color: #eccb5f;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-nav a:hover {
-    background-color: #eccb5f;
-    color: #333;
-    border-radius: 0.5em;
+.delete-button {
+    background-color: #d9534f;
+    color: white;
 }
