@@ -142,6 +142,7 @@ def updateBook(request, pk):
             if book.title != serializer.validated_data['title']:
                 if Book.objects.filter(title=serializer.validated_data['title']):
                     return Response({'message': 'Book already exists.'})
+        if not book.link or not book.cover or book.title != serializer.validated_data['title']:
             json_data = get_book_url_and_cover(serializer.validated_data['title'])
             if json_data:
                 serializer.save(link=json_data[0].get('url', None), cover=json_data[0].get('cover', None))

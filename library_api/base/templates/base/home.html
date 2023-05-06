@@ -29,8 +29,8 @@
                     </div>
                 </a>    
             <div class="card-buttons">
-                <button class="edit-button">Edit</button>
-                <button class="delete-button">Delete</button>
+                <button class="edit-button" id="edit-button-{{ book.id }}" onclick="location.href=`{% url 'update' book.id %}`">Edit</button>
+                <button class="delete-button" id="delete-button-{{ book.id }}">Delete</button>
             </div>
         </div>
         {% empty %}
@@ -39,4 +39,5 @@
     {% endfor %}
 </div>
 <script src="{% static 'js/home.js' %}"></script>
+<script src="{% static 'js/delete_book.js' %}"></script>
 {% endblock %}
