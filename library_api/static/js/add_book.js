@@ -1,6 +1,6 @@
 const csrf_token = document.getElementsByName('csrfmiddlewaretoken')[0].value;
 
-const formWrapper = document.getElementById("form-wrapper");
+const formWrapper = document.getElementsByClassName("form-wrapper")[0];
 const form = document.getElementById("form");
 
 const title = document.querySelector("#title-input-wrapper > .search-bar > input");
@@ -36,6 +36,9 @@ form.addEventListener("submit", (e) => {
         .then((data) => {
             console.log("Success:", data);
             formWrapper.innerHTML = `<h3>Book added successfully!</h3>`;
+            setTimeout(() => {
+                window.location.href = "http://127.0.0.1:8000/";
+            }, 1000);
         }
     );
 });
