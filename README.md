@@ -31,7 +31,7 @@ Run `python manage.py runserver`
 This will start the server on `http://localhost:8000/`. You can access the API documentation by visiting `http://localhost:8000/api/`
 
 
-In addition to the API, the project includes a landing page that shows all the books in the database. The landing page also features a navbar with a search function that allows you to search for books by title, author, genre or year. There is also an "Add" section that shows a form to add a new book to the database.
+In addition to the API, the project includes a landing page that shows all the books in the database. The landing page also features a navbar with a search function that allows you to search for books by title, author, genre or year and you can delete & edit existing books as well. There is also an "Add" section that shows a form to add a new book to the database.
 
 # Note
 
