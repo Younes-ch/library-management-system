@@ -28,13 +28,13 @@ def index(request):
         'api/books/',
         'api/books/<book_id>/',
         'api/books/add/',
-        'api/books/update/<book_id>/',
-        'api/books/delete/<book_id>/',
-        'api/books/delete/all/',
         'api/books/search/title/<title>/',
         'api/books/search/author/<author>/',
         'api/books/search/genre/<genre>/',
         'api/books/search/year/<year>/',
+        'api/books/update/<book_id>/',
+        'api/books/delete/<book_id>/',
+        'api/books/delete/all/',
     ]
     return Response(routes)
 
