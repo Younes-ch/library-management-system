@@ -8,8 +8,6 @@ The API can be accessed through HTTP requests and returns JSON responses. You ca
 
 # Installation
 
-# Installation
-
 * To get started, clone this repository to your local machine:
 
 `git clone https://github.com/Younes-ch/library-management-system.git`
